@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- bootstrap link -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<!-- endlink -->
+
+		<title>Dice Rolling {{ roll }}</title>
+	</head>
+	<body style="background-color:#777777;">
+		<div class="container" align="center"></br></br>
+			<h1 class="text text-light" style="font-size: 4em; font-family:Segoe Print">Dice Rolling Website</h1></br>
+			<h1 class="text text-light" style="font-family:Segoe Print">Roll Your Dice Down Below!</h1></br></br>
+
+			{% if roll == 1 %}
+			<a href="{% url 'index' %}" class="btn"><img src="{% static '1.png' %}"></img></a>
+			{% elif roll == 2 %}
+			<a href="{% url 'index' %}" class="btn"><img src="{% static '2.png' %}"></img></a>
+			{% elif roll == 3 %}
+			<a href="{% url 'index' %}" class="btn"><img src="{% static '3.png' %}"></img></a>
+			{% elif roll == 4 %}
+			<a href="{% url 'index' %}" class="btn"><img src="{% static '4.png' %}"></img></a>
+			{% elif roll == 5 %}
+			<a href="{% url 'index' %}" class="btn"><img src="{% static '5.png' %}"></img></a>
+			{% elif roll == 6 %}
+			<a href="{% url 'index' %}" class="btn"><img src="{% static '6.png' %}"></img></a>
+			{% endif %}
+
+			</br></br>
+			<h4 class="text text-light" style="font-family:Segoe Print">Click on dice to roll!</h1>
+		</div>
+	</body>
+</html>
